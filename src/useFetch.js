@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const useFetch = ((value) => {
     const [user, setUser] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(false);
 
     useEffect(() =>{
         if (value !== 'undefined') {    
@@ -16,9 +15,6 @@ const useFetch = ((value) => {
                     setIsLoading(false);
                     setUser(data);
                 })
-                .catch(err => {
-                    setError(true);
-                });
         }
     }, [value])
     return {

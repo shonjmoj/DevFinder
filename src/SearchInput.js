@@ -1,5 +1,4 @@
 import {AiOutlineSearch} from 'react-icons/ai'
-import {AiOutlineLoading} from 'react-icons/ai'
 
 const SearchInput = ({changeHandler, submitHandler, user, isLoading}) => {
     return (
@@ -15,7 +14,8 @@ const SearchInput = ({changeHandler, submitHandler, user, isLoading}) => {
             </form>
             <button className="m-2 p-3 bg-slate-900 rounded-xl outline-none drop-shadow-lg group
                     hover:bg-blue-700 transition-all duration-300 hover:px-4"
-                    type='submit'>
+                    type='submit'
+                    onClick={submitHandler}>
                     Search
                 </button>
         </div>

@@ -1,7 +1,4 @@
-import useFetch from "./useFetch";
-import { useState } from "react";
 import ReposAndFollowers from "./Repos&Followrs";
-import Loading from "./Loading";
 import Profile from "./Profile";
 import SearchInput from "./SearchInput";
 import {AiOutlineLoading} from 'react-icons/ai'

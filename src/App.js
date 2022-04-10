@@ -19,7 +19,6 @@ function App() {
         e.preventDefault();
         if (!updateUser) return;
         setValue(updateUser);
-        console.log(user);
     }
     return (
         <div className="flex flex-col items-center max-w-[60%] container">
