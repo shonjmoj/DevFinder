@@ -19,10 +19,14 @@ function App() {
         e.preventDefault();
         if (!updateUser) return;
         setValue(updateUser);
+        console.log(user);
     }
     return (
         <div className="flex flex-col items-center max-w-[60%] container">
-            <InfoCard changeHandler={changeHandler} submitHandler={submitHandler} user={user}/>
+            <InfoCard changeHandler={changeHandler} 
+                    submitHandler={submitHandler} 
+                    user={user}
+                    isLoading={isLoading}/>
         </div>
   );
 }

@@ -1,15 +1,23 @@
-const SearchInput = ({changeHandler, submitHandler}) => {
+import {AiOutlineSearch} from 'react-icons/ai'
+import {AiOutlineLoading} from 'react-icons/ai'
+
+const SearchInput = ({changeHandler, submitHandler, user, isLoading}) => {
     return (
         <div className="flex justify-between items-center bg-slate-700 rounded-xl drop-shadow-xl">
-            <form className="w-full" onChange={changeHandler} onSubmit={submitHandler}>
+            <AiOutlineSearch size={30} className="mx-4 text-gray-300"/>
+            <form className="w-full" onSubmit={submitHandler}>
                 <input type="text"
                     placeholder="Enter name here..."
                     required
-                    className="h-12 bg-transparent w-full outline-none mx-4"/>
+                    className="h-12 bg-transparent w-full outline-none mx-4 
+                            placeholder:text-gray-300 placeholder:font-light"
+                    onChange={changeHandler}/>
             </form>
-            <button className="m-2 p-2 bg-slate-900 rounded-xl outline-none drop-shadow-lg
-                hover:bg-blue-700 transition-all duration-300 ease-out hover:px-3"
-                onClick={submitHandler}>Search</button>
+            <button className="m-2 p-3 bg-slate-900 rounded-xl outline-none drop-shadow-lg group
+                    hover:bg-blue-700 transition-all duration-300 hover:px-4"
+                    type='submit'>
+                    Search
+                </button>
         </div>
     );
 }
